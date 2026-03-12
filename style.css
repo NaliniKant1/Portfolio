@@ -1,0 +1,95 @@
+/* ----------------- Global ----------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8fb;
+  margin: 0;
+}
+
+/* ----------------- Hero Section ----------------- */
+.hero {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  min-height: 70vh;
+}
+
+/* ----------------- Photo Scroll ----------------- */
+.photo-scroll {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab; /* indicate draggable */
+}
+
+.scroll-track {
+  display: flex;
+  gap: 20px;
+  user-select: none; /* disable text selection while dragging */
+  -webkit-user-drag: none; /* prevent default image drag */
+  scroll-behavior: smooth; /* smooth scroll for manual drag */
+}
+
+.scroll-track img {
+  height: 260px;
+  border-radius: 10px;
+  pointer-events: none; /* prevent image interfering with drag */
+}
+
+/* ----------------- Card Boxes ----------------- */
+.card-box {
+  background: white;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ----------------- Footer ----------------- */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-contact i {
+  font-size: 28px;
+  color: #0a66c2;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-contact i:hover {
+  color: #0073b1; /* LinkedIn blue hover */
+  transform: scale(1.1);
+}
+
+/* ----------------- Gallery Section ----------------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
